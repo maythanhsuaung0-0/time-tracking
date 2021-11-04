@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --rounded-sm: .8em;
+    --rounded-full: 50%;
+
+    --dark-blue: hsl(235, 46%, 20%);
+    --active-dark-blue: hsl(235, 45%, 61%);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: hsl(226, 43%, 10%);
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+
+.profile {
+    background: var(--dark-blue);
+    border-radius: var(--rounded-sm);
+}
+
+.profile__user,
+.profile__time {
+    padding: 1.5em 2em;
+}
+
+.profile__user {
+    display: flex;
+    gap: 2em;
+    border-radius: var(--rounded-sm);
+    background: hsl(246, 80%, 60%);
+}
+
+.user__img {
+    width: 3.5em;
+    height: 3.5em;
+    border: 2px solid #fff;
+    border-radius: var(--rounded-full);
+}
+
+.user__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.user__name {
+    align-self: center;
+    width: max-content;
+
+}
+
+span {
+    color: hsla(0, 0%, 100%, 0.411);
+    cursor: pointer;
+}
+
+.user__name span {
+    display: block;
+    font-weight: 300;
+}
+
+.name {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #fff;
+}
+
+.profile__time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.schedule__card {
+    border-radius: var(--rounded-sm);
+}
+
+.bg-work {
+    background: hsl(15, 100%, 70%);
+}
+
+.bg-play {
+    background: hsl(195, 74%, 62%);
+}
+
+.bg-study {
+    background: hsl(348, 100%, 68%);
+}
+
+.bg-exer {
+    background: hsl(145, 58%, 55%);
+}
+
+.bg-social {
+    background: hsl(264, 64%, 52%);
+}
+
+.bg-care {
+    background: hsl(43, 84%, 65%);
+}
+
+.card__icon {
+    height: 2.5em;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    top: -5px;
+}
+
+.card__time {
+    cursor: pointer;
+    background: var(--dark-blue);
+    padding: 1.5em 2em;
+    border-radius: var(--rounded-sm);
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.detail>div:first-child {
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+}
+
+.time-gap {
+    display: grid;
+    gap: .5em;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.card__ttl {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.current {
+    font-size: 1.8em;
+    font-weight: 300;
+}
+
+.prev {
+    align-self: center;
+    color: rgba(255, 255, 255, 0.733);
+}
+
+.active {
+    color: #fff;
+}
+
+.activee {
+    background: hsl(235, 45%, 61%);
+}
+
+@media (min-width:1024px) {
+    .container {
+        width: 80%;
+        grid-template-columns: 15em 1fr;
+    }
+
+    .profile__user {
+        display: flex;
+        flex-direction: column;
+        padding: 2.5em 2em;
+    }
+
+    .profile__time {
+        gap: 2em;
+        flex-direction: column;
+    }
+}
